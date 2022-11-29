@@ -1,21 +1,55 @@
-
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import * as userService from '../../utilities/services/users'
 
 export default function NavBar({ user, setUser }) {
-  function handleLogOut(){
+  function handleLogOut() {
     userService.logOut()
     setUser(null)
   }
 
   return (
-    <nav>
-      <Link to="/orders">Order History</Link>
-      &nbsp; | &nbsp;
-      <Link to="/orders/new">New Order</Link>
-      &nbsp; &nbsp; <span className="name">Hey there {user.name}!</span>
-      &nbsp; &nbsp; <Link to="" onClick={handleLogOut}>Log Out</Link>
+    <nav class='navbar navbar-expand-lg'>
+      <div class='container-fluid'>
+        <a class='navbar-brand' href='/'>
+          Tryout
+        </a>
+        <button
+          class='navbar-toggler'
+          type='button'
+          data-bs-toggle='collapse'
+          data-bs-target='#navbarNavAltMarkup'
+          aria-controls='navbarNavAltMarkup'
+          aria-expanded='false'
+          aria-label='Toggle navigation'
+        >
+          <span class='navbar-toggler-icon'></span>
+        </button>
+        <div class='collapse navbar-collapse' id='navbarNavAltMarkup'>
+          <div class='navbar-nav'>
+            <Link to='/workout' className='nav-link'>
+              Tracker
+            </Link>
+            <Link to='/exercises' className='nav-link'>
+              Exercises
+            </Link>
 
+            <Link to='' className='nav-link' onClick={handleLogOut}>
+              Log Out
+            </Link>
+          </div>
+        </div>
+      </div>
     </nav>
-  );
+  )
 }
+
+// <nav>
+//   <Link to='/workout'>Tracker</Link>
+//   &nbsp; | &nbsp;
+//   <Link to='/exercises'>Exercises</Link>
+//   &nbsp; &nbsp; <span className='name'>Hey there {user.name}!</span>
+//   &nbsp; &nbsp;{' '}
+//   <Link to='' onClick={handleLogOut}>
+//     Log Out
+//   </Link>
+// </nav>
