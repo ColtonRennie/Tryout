@@ -32,7 +32,6 @@ export default function NavBar({ user, setUser }) {
             <Link to='/exercises' className='nav-link'>
               Exercises
             </Link>
-
             <Link to='' className='nav-link' onClick={handleLogOut}>
               Log Out
             </Link>
