@@ -17,11 +17,7 @@ import { workouts } from '../../data'
 export default function App() {
   const [user, setUser] = useState(getUser())
   const [workoutList, setWorkoutList] = useState(workouts)
-
-  workoutList.map((workout) => {
-    return workout.forEach
-  })
-
+  console.log(workoutList)
   return (
     <main className='App'>
       {user ? (
@@ -32,7 +28,7 @@ export default function App() {
               path='/workout'
               element={
                 <MyWorkoutPage
-                  workout={workoutList}
+                  workoutList={workoutList}
                   setWorkout={setWorkoutList}
                 />
               }
