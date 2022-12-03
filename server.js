@@ -8,8 +8,6 @@ require('dotenv').config()
 // Connect to the database (after the dotenv)
 require('./config/database')
 
-const userRouter = require('./routes/api/users')
-
 const app = express()
 
 app.use(logger('dev'))
@@ -30,7 +28,7 @@ app.use('/api/users', require('./routes/api/users'))
 /////////////////
 
 // const isLoggedIn = require('./config/isLoggedIn')
-app.use('/workout', require('./routes/api/trackers'))
+app.use('/api/workout', require('./routes/api/trackers'))
 
 //////////////////
 

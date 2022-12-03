@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom'
 
 export default function TrackerCard({ workout }) {
-  console.log(workout.id)
   return (
-    <Link to={`/workout/${workout.id}`}>
+    <Link to={`/workout/${workout._id}`}>
       <div className='workoutCard'>
         <div className='card-body '>
           <h5 className='card-text'>Description : {workout.description}</h5>

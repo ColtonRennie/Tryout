@@ -15,7 +15,7 @@ a:hover {
   text-decoration: underline white;
 }
 
-button {
+a.button.btn-sm {
   background-color: black;
   border-radius: 10px;
   border-color: rgb(136, 90, 4);
