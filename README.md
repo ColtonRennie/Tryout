@@ -14,7 +14,7 @@
     <br />
     <a href="https://github.com/github_username/repo_name">View Demo</a>
     ·
-    <a href="https://github.com/ColtonRennie/FitnessBro/issues">Report Bug</a>
+    <a href="https://github.com/ColtonRennie/Tryoutissues">Report Bug</a>
   </p>
 </div>
 
